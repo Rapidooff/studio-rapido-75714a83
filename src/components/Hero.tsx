@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Code, Palette, Zap } from 'lucide-react'
 import heroBackground from '@/assets/hero-background.jpg'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -50,12 +51,11 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="group">
-              ✨ Entrer dans l'univers
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <Button asChild variant="hero" size="xl" className="group">
+              <Link to="/services">✨ Découvrir nos services <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" /></Link>
             </Button>
-            <Button variant="glass" size="xl">
-              🔎 Découvrir nos projets
+            <Button asChild variant="glass" size="xl">
+              <Link to="/portfolio">🔎 Voir nos projets</Link>
             </Button>
           </div>
 
